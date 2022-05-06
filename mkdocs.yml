@@ -1,0 +1,60 @@
+site_name: SQA OnBoarding Challenge
+site_description: This is a repo corresponding documentation of the SQA OnBoarding challenge for new hires worked by Fabian P.G
+repo_url: https://github.com/wizeline/sqa-challenge-fabianportilloglez 
+site_author: Fabian Portillo Gonzalez
+
+nav:
+    - Home:
+      - 'Index': 'index.md'
+      - 'SQA Diagram': 'sqa-diagram.md'
+    - Back End: 
+      - 'Process': 'Back-End/back-process.md'
+    - Front End:
+      - 'Process': 'Front-End/front-process.md'
+    #- Performance:
+    #  - 'Process': 'Performance/perf-process.md'
+    - Contribute Doc: 
+      - 'Installation': 'Contribute-Doc/install-mkdocs.md'
+      - 'Contribute': 'Contribute-Doc/contribute-doc.md'
+      - 'References': 'Contribute-Doc/mkdocs-refs.md'
+
+# Configurations
+theme:
+      name: 'material'
+      language: 'en'
+      palette:
+          primary: 'indigo'
+          accent: 'indigo'
+      font:
+          text: 'Roboto'
+      favicon: images/favicon.png
+      icon:
+        repo: fontawesome/brands/git-alt
+      feature:
+           tabs: true
+      features:
+        - navigation.tabs
+        - navigation.sections
+        - search.suggest
+        - search.highlight
+        - header.autohide
+        - toc.autohide
+      extra:
+        version:
+          method: mike
+
+markdown_extensions:
+    - admonition
+    - codehilite:
+        guess_lang: true
+    - toc:
+          permalink: true
+    - attr_list
+
+plugins:
+  - search
+
+      
+
+
+
