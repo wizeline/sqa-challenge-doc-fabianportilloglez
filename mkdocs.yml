@@ -6,13 +6,17 @@ site_author: Fabian Portillo Gonzalez
 nav:
     - Home:
       - 'Index': 'index.md'
-      - 'SQA Diagram': 'sqa-diagram.md'
     - Back End: 
+      - 'Requirements': 'Back-End/back-reqs.md'
       - 'Process': 'Back-End/back-process.md'
     - Front End:
+      - 'Requirements': 'Front-End/front-reqs.md'
       - 'Process': 'Front-End/front-process.md'
-    #- Performance:
-    #  - 'Process': 'Performance/perf-process.md'
+    - Performance:
+      - 'Requirements': 'Performance/perf-reqs.md'
+      - 'Process': 'Performance/perf-process.md'
+    - SQA Diagram:
+      - 'Diagram': 'SQA-Diagram/sqa-diagram.md'
     - Contribute Doc: 
       - 'Installation': 'Contribute-Doc/install-mkdocs.md'
       - 'Contribute': 'Contribute-Doc/contribute-doc.md'
@@ -44,12 +48,18 @@ theme:
           method: mike
 
 markdown_extensions:
+    - attr_list
+    - footnotes
+    - tables
+    - pymdownx.tasklist:
+        custom_checkbox: true
+        # clickable_checkbox: true
+
     - admonition
     - codehilite:
         guess_lang: true
     - toc:
           permalink: true
-    - attr_list
 
 plugins:
   - search

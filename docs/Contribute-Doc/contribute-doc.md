@@ -34,19 +34,10 @@ Once you did changes commit them using:
 
 ### **3.- Push your changes**
 
-Foundation Tools:
-
-```git push origin master```
-
-Other teams:
-
-```git push origin your-branch-name```
-
+```git push origin main```
 ### **4.- Deploy the changes to Github Pages**
 
 ```mkdocs gh-deploy```
-
-
 ### **Done!**
 
 
