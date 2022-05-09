@@ -8,7 +8,7 @@
 ## [**SQA Fabián - Site documentation**](https://wizeline.github.io/sqa-challenge-doc-fabianportilloglez/)
 
 ___
-## **Participation:** 
+## **Collaborators:** 
 * **@author:** Fabián Portillo González 
 
 * **@github user:** fabianpg95
