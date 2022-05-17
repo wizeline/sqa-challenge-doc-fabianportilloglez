@@ -13,6 +13,8 @@ ___
 
 * **@github user:** fabianpg95
 
+* **@menthor:** Luca Bacasehua Morales
+
 ___ 
 ## **References**
 

@@ -1,5 +1,5 @@
-# mkdocs material repo
-/mkdocs-material
-
 # HTML files build
 /site
+
+# images and videos
+img

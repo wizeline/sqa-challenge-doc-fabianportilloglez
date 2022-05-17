@@ -8,13 +8,19 @@ nav:
       - 'Index': 'index.md'
     - Back End: 
       - 'Requirements': 'Back-End/back-reqs.md'
-      - 'Process': 'Back-End/back-process.md'
+      - '1.- Teck Stack': 'Back-End/back-tech-stack.md'
+      - '2.- Process': 'Back-End/back-process.md'
+      - '3.- Results': 'Back-End/back-results.md'
     - Front End:
       - 'Requirements': 'Front-End/front-reqs.md'
-      - 'Process': 'Front-End/front-process.md'
+      - '1.- Teck Stack': 'Front-End/front-tech-stack.md'
+      - '2.- Process': 'Front-End/front-process.md'
+      - '3.- Results': 'Front-End/front-results.md'
     - Performance:
       - 'Requirements': 'Performance/perf-reqs.md'
-      - 'Process': 'Performance/perf-process.md'
+      - '1.- Teck Stack': 'Performance/perf-tech-stack.md'
+      - '2.- Process': 'Performance/perf-process.md' 
+      - '3.- Results': 'Performance/perf-results.md' 
     - SQA Diagram:
       - 'Diagram': 'SQA-Diagram/sqa-diagram.md'
     - Contribute Doc: 
