@@ -11,22 +11,32 @@ nav:
       - '1.- Teck Stack': 'Back-End/back-tech-stack.md'
       - '2.- Process': 'Back-End/back-process.md'
       - '3.- Results': 'Back-End/back-results.md'
+      - 'TODO: Improvements': 'Back-End/back-improv.md'
+
     - Front End:
       - 'Requirements': 'Front-End/front-reqs.md'
       - '1.- Teck Stack': 'Front-End/front-tech-stack.md'
       - '2.- Process': 'Front-End/front-process.md'
       - '3.- Results': 'Front-End/front-results.md'
+      - 'TODO: Improvements': 'Front-End/front-improv.md'
+
     - Performance:
       - 'Requirements': 'Performance/perf-reqs.md'
       - '1.- Teck Stack': 'Performance/perf-tech-stack.md'
       - '2.- Process': 'Performance/perf-process.md' 
       - '3.- Results': 'Performance/perf-results.md' 
+      - 'TODO: Improvements': 'Performance/perf-improv.md'
+
     - SQA Diagram:
       - 'Diagram': 'SQA-Diagram/sqa-diagram.md'
+
     - Contribute Doc: 
       - 'Installation': 'Contribute-Doc/install-mkdocs.md'
       - 'Contribute': 'Contribute-Doc/contribute-doc.md'
       - 'References': 'Contribute-Doc/mkdocs-refs.md'
+
+    - References:
+      - 'References': 'References/refs.md'
 
 # Configurations
 theme:
@@ -69,8 +79,3 @@ markdown_extensions:
 
 plugins:
   - search
-
-      
-
-
-

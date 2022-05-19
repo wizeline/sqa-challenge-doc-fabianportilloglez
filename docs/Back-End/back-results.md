@@ -13,6 +13,15 @@ Here are listed the images of some results achieved for the sections about the b
 
 ![tasks-postman](../../img/back/tasks-postman.png)
 
+
+## **API documentation todoist**
+
+## [todoist API doc](https://documenter.getpostman.com/view/20854583/UyxjFmQX)
+
+![API doc main](../../img/back/api-doc-main.png)
+
+![API doc post](../../img/back/api-doc-post.png)
+
 ___
 ### **Newman and HTML reports**
 
