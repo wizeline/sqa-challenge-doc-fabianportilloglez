@@ -66,6 +66,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#front-end-con-cypress" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -547,9 +552,38 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2.- Process
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         2.- Process
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#front-end-con-cypress" class="md-nav__link">
+    Front End con Cypress:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -884,6 +918,21 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#front-end-con-cypress" class="md-nav__link">
+    Front End con Cypress:
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -902,7 +951,21 @@
 
   <h1>2.- Process</h1>
 
-
+<h3 id="front-end-con-cypress"><strong>Front End con Cypress:</strong><a class="headerlink" href="#front-end-con-cypress" title="Permanent link">&para;</a></h3>
+<p><strong>Variables de ambiente</strong> — Guardar en(.env y cypress.json) los valores usados a lo largo del SQA. También se puede tener un folder de config y centro varios files dependiendo el ambiente o un archivo cypress.env.json donde se definan las cosas</p>
+<p><strong>Utilizar POM y BDD</strong> - hacer que la estrategia sea escalable y las funciones definidas o los elenentos sean reutilizables</p>
+<p><strong>Definir un ESLint</strong> — en el proyecto con reglas y estructura
+Crear scripts --- En el package.json definir algunos scripts para poder correr los tests también en --headless CLI
+Eliminar los tests y data después de correrse - Definir los before() and after() en cada archivo de .js para que los tests se mantengan independientes y sin data que estorbe</p>
+<p><strong>Selección de elementos</strong> --- Encontrar la estrategia de mejor selección de elementos y comprobar si es mejor guardarlos por archivo de Page o tener algunas definciiones en archivos independientes y llamarlos desde ahí</p>
+<p><strong>Comandos comunes y reutilizables</strong> --- Es conveniente definir algunos comandos en commands.js o crear un file de commonSteps donde se definan aquellos que se pueden reutilizar?</p>
+<p><strong>Ocultar contraseña</strong> - Hacer que los datos sensibles no sean visibles al correr el Test runner con log: false
+Screenshots: Hacer eficiente la forma en que se almacenan y también borrarlos una vez que el test termina</p>
+<p><strong>Assertions</strong> --- Chai assertions de expect y should en los tests</p>
+<p><strong>Reportes</strong> --- Lograr que se creen reportes cuando finalice el test y que se guarden en un folder</p>
+<p><strong>Slack notification</strong>
+Jenkins, asignar que los tests corran por consola usando jenkins pipeline y definiendo todo en un Jenkinsfile</p>
+<p><strong>Sonarqube</strong> --- Configurar sonarqube e integrarlo con el repo de github y además en un stage del Jenkinsfile para checar las validaciones</p>
 
               
             </article>
