@@ -30,15 +30,3 @@ ___
 ![html reports](../../img/back/summary-report.png)
 
 ![html report results](../../img/back/summary-endpoints.png)
-___
-### **Jenkins & Job execution**
-
-![configuration](/img/back/tux.png)
-
-![build job](/img/back/tux.png)
-
-![results](/img/back/tux.png)
-
-![reports generated](/img/back/tux.png)
-
-

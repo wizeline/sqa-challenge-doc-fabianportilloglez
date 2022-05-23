@@ -31,7 +31,7 @@ ___
 
 1. Install Jenkins in your computer
 2. Open your localhost in web browser and complete the steps for admin password, plugins and required.
-3. Install plugins Manage Jenkins > Manage Plugins: *(HTML reporter, NodeJS, Blue Ocean, SonarScanner)*
+3. Install plugins Manage Jenkins > Manage Plugins: *(HTML reporter, NodeJS, Blue Ocean, SonarScanner, Jenkinslint, Slack Notification)*
 4. Add NodeJs: Global Tools configuration > NodeJs > choose newman for npm.
 5. Create a new item (job). Select 'pipeline' if you want to define a Jenkinsfile with different stages or environments, but if not then select 'freestyle project'.
 6. Click on Configure:
@@ -46,11 +46,3 @@ ___
     !!! note
         you can install and use Jenkins in your localhost or use a Docker image of Jenkins. Both are correct.
 ___
-
-### **Sonarqube**
-
-**Installation**:
-
-1. I followed this [guide](https://medium.com/@lazyprogram/setup-sonarqube-on-mac-osx-c16a161d07d5)  to install and start Sonarqube in localhost with port 9000
-2. I created a SonarScanner tool in Jenkins as shown in this [guide](https://igorski.co/sonarqube-scans-using-jenkins-declarative-pipelines/)
-3. To configure [Sonarqube with jenkins](https://tomgregory.com/sonarqube-quality-gates-in-jenkins-build-pipeline/) I followed those steps, except for the Jenkinsfile sh commands, for that I followed [this](https://igorski.co/sonarqube-scans-using-jenkins-declarative-pipelines/) except for configuring *sonar-project.properties* file because for that I based on internet stuff and official documentation of Sonarqube.
