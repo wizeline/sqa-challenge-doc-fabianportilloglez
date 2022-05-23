@@ -66,6 +66,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#steps" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -771,9 +776,45 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ESlint
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         ESlint
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    Steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenkinsfile" class="md-nav__link">
+    jenkinsfile
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1018,6 +1059,28 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    Steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenkinsfile" class="md-nav__link">
+    jenkinsfile
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1036,7 +1099,85 @@
 
   <h1>ESlint</h1>
 
+<p><strong>Optional installation plugins:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="n">npm</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">eslint</span><span class="o">-</span><span class="n">plugin</span><span class="o">-</span><span class="n">prettier</span><span class="nv">@latest</span><span class="w"> </span><span class="c1">--save-dev</span>
+</code></pre></div>
 
+<hr />
+<div class="codehilite"><pre><span></span><code>    npm install eslint-plugin-only-warn --save-de
+</code></pre></div>
+
+<hr />
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="n">npm</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">eslint</span><span class="mf">@4.</span><span class="n">x</span><span class="w"> </span><span class="n">babel</span><span class="o">-</span><span class="n">eslint</span><span class="mi">@8</span><span class="w"> </span><span class="o">--</span><span class="n">save</span><span class="o">-</span><span class="n">dev</span><span class="w"></span>
+</code></pre></div>
+
+<hr />
+<h3 id="steps"><strong>Steps</strong><a class="headerlink" href="#steps" title="Permanent link">&para;</a></h3>
+<p><a href="https://eslint.org/docs/user-guide/getting-started">ESint doc</a></p>
+<ol>
+<li>
+<p>Install: </p>
+<div class="codehilite"><pre><span></span><code>npm install eslint --save-dev
+</code></pre></div>
+
+</li>
+<li>
+<p>Init configuration file: </p>
+<div class="codehilite"><pre><span></span><code><span class="n">npm</span><span class="w"> </span><span class="n">init</span><span class="w"> </span><span class="nv">@eslint</span><span class="o">/</span><span class="n">config</span><span class="w"></span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Define the configuration and rules. <strong>example</strong>:</p>
+<div class="codehilite"><pre><span></span><code>&quot;rules&quot;: {
+&quot;linebreak-style&quot;: [
+    &quot;error&quot;,
+    &quot;unix&quot;
+],
+&quot;quotes&quot;: [
+    &quot;error&quot;,
+    &quot;single&quot;
+],
+&quot;semi&quot;: [
+    &quot;error&quot;,
+    &quot;never&quot;
+]
+</code></pre></div>
+
+</li>
+<li>
+<p>Create a script in <strong>package.json file</strong> </p>
+<div class="codehilite"><pre><span></span><code>&quot;lint&quot;: &quot;eslint ./src&quot;,
+</code></pre></div>
+
+</li>
+<li>
+<p><strong>run ESlint:</strong></p>
+</li>
+</ol>
+<p><strong>local:</strong></p>
+<p><em>example</em></p>
+<div class="codehilite"><pre><span></span><code>    eslint ./
+</code></pre></div>
+
+<p>//</p>
+<div class="codehilite"><pre><span></span><code>    eslint ./ -o ./test/eslint-report.html
+</code></pre></div>
+
+<p>or </p>
+<div class="codehilite"><pre><span></span><code>    npm run lint
+</code></pre></div>
+
+<h3 id="jenkinsfile"><strong>jenkinsfile</strong><a class="headerlink" href="#jenkinsfile" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="n">stage</span><span class="p">(</span><span class="s1">&#39;Linting tools - Eslint&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">steps</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">echo</span><span class="w"> </span><span class="s1">&#39;running Eslint..&#39;</span><span class="w"></span>
+<span class="w">            </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;npm run lint&#39;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+<hr />
 
               
             </article>

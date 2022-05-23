@@ -66,6 +66,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#steps" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -799,9 +804,38 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Backend scripts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Backend scripts
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    Steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1018,6 +1052,21 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    Steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1036,7 +1085,38 @@
 
   <h1>Backend scripts</h1>
 
+<h3 id="steps"><strong>Steps</strong><a class="headerlink" href="#steps" title="Permanent link">&para;</a></h3>
+<p>Prerequisites: 
+Install plugin to generate reports using newman.</p>
+<div class="codehilite"><pre><span></span><code>    npm install -g newman-reporter-htmlextra
+</code></pre></div>
 
+<ol>
+<li>
+<p>Create a script in <strong>package.json file</strong> </p>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="s2">&quot;backendTests&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;newman run ./src/backend/postman/todoist-backend.postman_collection.json -e ./src/backend/postman/todoist-backend.postman_environment.json -r htmlextra --reporter-htmlextra-export ./report_results/test_results_report.html&quot;</span><span class="w"></span>
+</code></pre></div>
+
+</li>
+<li>
+<p><strong>run backend scripts:</strong></p>
+</li>
+</ol>
+<p><strong>local:</strong></p>
+<p><em>example</em></p>
+<div class="codehilite"><pre><span></span><code>    npm run backendTests
+</code></pre></div>
+
+<p><strong>jenkinsfile</strong></p>
+<div class="codehilite"><pre><span></span><code>    stage(&#39;Backend&#39;) {
+        steps {
+            echo &#39;running backend tests...&#39;
+            sh &#39;npm run backendTests&#39;
+        }
+    }
+</code></pre></div>
+
+<hr />
 
               
             </article>

@@ -66,6 +66,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#slack-github" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -757,9 +762,59 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Slack Notification
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Slack Notification
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#slack-github" class="md-nav__link">
+    Slack + Github
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenkins-slack" class="md-nav__link">
+    Jenkins + Slack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenkinsfile" class="md-nav__link">
+    Jenkinsfile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    results
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1018,6 +1073,42 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#slack-github" class="md-nav__link">
+    Slack + Github
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenkins-slack" class="md-nav__link">
+    Jenkins + Slack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenkinsfile" class="md-nav__link">
+    Jenkinsfile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    results
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1036,7 +1127,58 @@
 
   <h1>Slack Notification</h1>
 
+<h3 id="slack-github"><strong>Slack + Github</strong><a class="headerlink" href="#slack-github" title="Permanent link">&para;</a></h3>
+<p>Link Slack with github account following these images:</p>
+<p><img alt="app" src="../../img/jenkins-pipe/slack/app.png" />
+<img alt="gh-app" src="../../img/jenkins-pipe/slack/gh-app.png" />
+<img alt="connect github" src="../../img/jenkins-pipe/slack/connect-gh.png" />
+<img alt="code" src="../../img/jenkins-pipe/slack/code.png" /></p>
+<hr />
+<p><img alt="auth" src="../../img/jenkins-pipe/slack/auth.png" />
+<img alt="connect" src="../../img/jenkins-pipe/slack/connect.png" />
+<img alt="free" src="../../img/jenkins-pipe/slack/free.png" />
+<img alt="install" src="../../img/jenkins-pipe/slack/install.png" />
+<img alt="plan" src="../../img/jenkins-pipe/slack/plan.png" />
+<img alt="open" src="../../img/jenkins-pipe/slack/open.png" /></p>
+<hr />
+<h3 id="jenkins-slack"><strong>Jenkins + Slack</strong><a class="headerlink" href="#jenkins-slack" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Create Slack channel to receive the notifications once a build in Jenkins finish.</li>
+<li>App &gt; Jenkins &gt; Add &gt;. Configuration
+<img alt="app jenkins" src="../../img/jenkins-pipe/slack/app-jenkins.png" />
+<img alt="add" src="../../img/jenkins-pipe/slack/add.png" />
+<img alt="link channel" src="../../img/jenkins-pipe/slack/link-channel.png" />
+<img alt="instructions" src="../../img/jenkins-pipe/slack/instructions.png" />
+<img alt="settings" src="../../img/jenkins-pipe/slack/settings.png" />
+<img alt="slack-jenkins" src="../../img/jenkins-pipe/slack/slack-jenk.png" />
+<img alt="secret" src="../../img/jenkins-pipe/slack/secret.png" /></li>
+</ol>
+<hr />
+<h3 id="jenkinsfile"><strong>Jenkinsfile</strong><a class="headerlink" href="#jenkinsfile" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>post {
+    success {
+        echo &#39;success!&#39;
+        slackSend color: &quot;#11cd4b&quot;, channel: &quot;#sqa-challenge-fabianpg-notif&quot;, message: &quot;*Build Passed*\n Job: <span class="cp">${</span><span class="n">env</span><span class="o">.</span><span class="n">JOB_NAME</span><span class="cp">}</span>\n Build: <span class="cp">${</span><span class="n">env</span><span class="o">.</span><span class="n">BUILD_NUMBER</span><span class="cp">}</span>\n URL: <span class="cp">${</span><span class="n">env</span><span class="o">.</span><span class="n">BUILD_URL</span><span class="cp">}</span>&quot;
+    }
+    failure {
+        echo &#39;marked as failure&#39;
+        slackSend color: &quot;#F50407&quot;, channel: &quot;#sqa-challenge-fabianpg-notif&quot;, message: &quot;*Build Failed*\n Job: <span class="cp">${</span><span class="n">env</span><span class="o">.</span><span class="n">JOB_NAME</span><span class="cp">}</span>\n Build: <span class="cp">${</span><span class="n">env</span><span class="o">.</span><span class="n">BUILD_NUMBER</span><span class="cp">}</span>\n URL: <span class="cp">${</span><span class="n">env</span><span class="o">.</span><span class="n">BUILD_URL</span><span class="cp">}</span>&quot;
+    }
+    unstable {
+        echo &#39;marked as unstable&#39;
+        slackSend color: &quot;#df6805&quot;, channel: &quot;#sqa-challenge-fabianpg-notif&quot;, message: &quot;*Build Unstable*\n Job: <span class="cp">${</span><span class="n">env</span><span class="o">.</span><span class="n">JOB_NAME</span><span class="cp">}</span>\n Build: <span class="cp">${</span><span class="n">env</span><span class="o">.</span><span class="n">BUILD_NUMBER</span><span class="cp">}</span>\n URL: <span class="cp">${</span><span class="n">env</span><span class="o">.</span><span class="n">BUILD_URL</span><span class="cp">}</span>&quot;
+    }
+    aborted {
+        echo &#39;aborted&#39;
+        slackSend color: &quot;#f3f024&quot;, channel: &quot;#sqa-challenge-fabianpg-notif&quot;, message: &quot;*Build Aborted*\n Job: <span class="cp">${</span><span class="n">env</span><span class="o">.</span><span class="n">JOB_NAME</span><span class="cp">}</span>\n Build: <span class="cp">${</span><span class="n">env</span><span class="o">.</span><span class="n">BUILD_NUMBER</span><span class="cp">}</span>\n URL: <span class="cp">${</span><span class="n">env</span><span class="o">.</span><span class="n">BUILD_URL</span><span class="cp">}</span>&quot;        
+    }
+}
+</code></pre></div>
 
+<hr />
+<h3 id="results"><strong>results</strong><a class="headerlink" href="#results" title="Permanent link">&para;</a></h3>
+<p><img alt="builds" src="../../img/jenkins-pipe/slack/builds.png" /></p>
+<p><img alt="slack results" src="../../img/jenkins-pipe/slack/slack-results.png" /></p>
 
               
             </article>

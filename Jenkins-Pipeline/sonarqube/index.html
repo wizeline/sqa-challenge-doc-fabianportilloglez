@@ -798,6 +798,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1107,6 +1114,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    Results
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1134,31 +1148,36 @@
 <li>I created a SonarScanner tool in Jenkins as shown in this <a href="https://igorski.co/sonarqube-scans-using-jenkins-declarative-pipelines/">guide</a></li>
 <li>To configure <a href="https://tomgregory.com/sonarqube-quality-gates-in-jenkins-build-pipeline/">Sonarqube with jenkins</a> I followed those steps, except for the Jenkinsfile sh commands, for that I followed <a href="https://igorski.co/sonarqube-scans-using-jenkins-declarative-pipelines/">this</a> except for configuring <em>sonar-project.properties</em> file because for that I based on internet stuff and official documentation of Sonarqube.</li>
 </ol>
+<p><img alt="sonar start" src="../../img/jenkins-pipe/sonar/sonar-start.png" /></p>
+<p><img alt="sonar localhost" src="../../img/jenkins-pipe/sonar/sonar-localhost.png" /></p>
 <hr />
 <h3 id="sonarqube-configuration"><strong>Sonarqube configuration</strong>:<a class="headerlink" href="#sonarqube-configuration" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Create project:</strong> <em>Create project &gt; manually &gt; Write name</em> 
-<img alt="project" src="../../img/jenkins-pipe/sonar/../../../docs/img/jenkins-pipe/sonar/project.png" /></li>
+<img alt="project" src="../../img/jenkins-pipe/sonar/project.png" /></li>
 <li><strong>Enable scan code</strong> with sonar without force user credentials: <em>Administration &gt; Security &gt; Force user authentication (disable)</em>
-<img alt="auth" src="../../img/jenkins-pipe/sonar/../../../docs/img/jenkins-pipe/sonar/auth.png" /></li>
+<img alt="auth" src="../../img/jenkins-pipe/sonar/auth.png" /></li>
 <li><strong>Set permissions</strong> to the project: <em>Administration &gt; Project &gt; Management &gt;</em> 
-<img alt="global permissions" src="../../img/jenkins-pipe/sonar/../../../docs/img/jenkins-pipe/sonar/global-perm.png" /></li>
-<li><strong>Quality Gates:</strong> <em>Quality Gates &gt; create &gt; "name"</em></li>
-<li><strong>Add condition:</strong> You can create new conditions according of your needs and choose if you want to apply to "On new code" or "overall code".</li>
-<li><strong>Grant permissions</strong> to the previous user you created to link it to this Quality Gate. 
-   <img alt="permissions" src="../../img/jenkins-pipe/sonar/../../../docs/img/jenkins-pipe/sonar/permissions.png" /></li>
+<img alt="global permissions" src="../../img/jenkins-pipe/sonar/global-perm.png" /></li>
+<li>
+<p><strong>Quality Gates:</strong> <em>Quality Gates &gt; create &gt; "name"</em></p>
+<p>4.1 <strong>Add condition:</strong> You can create new conditions according of your needs and choose if you want to apply to "On new code" or "overall code".</p>
+<p>4.2 <strong>Grant permissions</strong> to the previous user you created to link it to this Quality Gate. 
+   <img alt="permissions" src="../../img/jenkins-pipe/sonar/permissions.png" /></p>
+</li>
 </ol>
-<p><img alt="project" src="../../img/jenkins-pipe/sonar/../../../docs/img/jenkins-pipe/sonar/qualityGates.png" />
+<p><strong>Quality Gates</strong>
+<img alt="Quality Gates" src="../../img/jenkins-pipe/sonar/qualityGates.png" />
 5. You can choose if select <strong>as default</strong> the new Quality Gate you created or select the one with name "Sonar Way" with the default metrics already has.</p>
 <hr />
 <h3 id="jenkins-configuration"><strong>Jenkins configuration</strong><a class="headerlink" href="#jenkins-configuration" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Plugin:</strong> Verify if Sonarqube plugin is already installed.
-<img alt="plugin" src="../../img/jenkins-pipe/sonar/../../../docs/img/jenkins-pipe/sonar/plugin.png" /></li>
+<img alt="plugin" src="../../img/jenkins-pipe/sonar/plugin.png" /></li>
 <li><strong>SQ server:</strong> Manage &gt; Configuration &gt; SonarQube servers &gt; add
-<img alt="server" src="../../img/jenkins-pipe/sonar/../../../docs/img/jenkins-pipe/sonar/server.png" /></li>
+<img alt="server" src="../../img/jenkins-pipe/sonar/server.png" /></li>
 <li><strong>SQ scanner:</strong> Manage &gt; Global Tool Configuration &gt; SonarQube Scanner &gt; add
-<img alt="scanner" src="../../img/jenkins-pipe/sonar/../../../docs/img/jenkins-pipe/sonar/scanner.png" /></li>
+<img alt="scanner" src="../../img/jenkins-pipe/sonar/scanner.png" /></li>
 </ol>
 <hr />
 <h3 id="jenkinsfile"><strong>Jenkinsfile</strong><a class="headerlink" href="#jenkinsfile" title="Permanent link">&para;</a></h3>
@@ -1186,6 +1205,9 @@
 <span class="w">        </span><span class="p">}</span><span class="w"> </span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 </code></pre></div>
+
+<h2 id="results"><strong>Results</strong><a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
+<p><img alt="sonar-jenkins results" src="../../img/jenkins-pipe/sonar/sonar-results.png" /></p>
 
               
             </article>
