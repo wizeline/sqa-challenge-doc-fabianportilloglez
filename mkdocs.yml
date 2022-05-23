@@ -27,6 +27,14 @@ nav:
       - '3.- Results': 'Performance/perf-results.md' 
       - 'TODO: Improvements': 'Performance/perf-improv.md'
 
+    - Jenkins Pipeline:
+      - 'Sonarqube': 'Jenkins-Pipeline/sonarqube.md'
+      - 'Slack Notification': 'Jenkins-Pipeline/slack-notif.md'
+      - 'ESlint': 'Jenkins-Pipeline/eslint.md'
+      - 'Frontend scripts': 'Jenkins-Pipeline/front-script.md'
+      - 'Backend scripts': 'Jenkins-Pipeline/back-script.md'
+      - 'Performance scripts': 'Jenkins-Pipeline/perf-script.md'
+
     - SQA Diagram:
       - 'Diagram': 'SQA-Diagram/sqa-diagram.md'
 
