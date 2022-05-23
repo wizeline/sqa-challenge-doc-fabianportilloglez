@@ -246,6 +246,22 @@
   
   
     <li class="md-tabs__item">
+      <a href="../../Jenkins-Pipeline/sonarqube/" class="md-tabs__link">
+        Jenkins Pipeline
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../../SQA-Diagram/sqa-diagram/" class="md-tabs__link">
         SQA Diagram
       </a>
@@ -786,12 +802,130 @@
       
       
         <label class="md-nav__link" for="__nav_5">
+          Jenkins Pipeline
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Jenkins Pipeline" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Jenkins Pipeline
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Jenkins-Pipeline/sonarqube/" class="md-nav__link">
+        Sonarqube
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Jenkins-Pipeline/slack-notif/" class="md-nav__link">
+        Slack Notification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Jenkins-Pipeline/eslint/" class="md-nav__link">
+        ESlint
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Jenkins-Pipeline/front-script/" class="md-nav__link">
+        Frontend scripts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Jenkins-Pipeline/back-script/" class="md-nav__link">
+        Backend scripts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Jenkins-Pipeline/perf-script/" class="md-nav__link">
+        Performance scripts
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
           SQA Diagram
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="SQA Diagram" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           SQA Diagram
         </label>
@@ -828,18 +962,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_7">
           Contribute Doc
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Contribute Doc" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Contribute Doc
         </label>
@@ -904,18 +1038,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_7">
+        <label class="md-nav__link" for="__nav_8">
           References
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="References" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           References
         </label>
@@ -1068,7 +1202,7 @@
 <ol>
 <li>Install Jenkins in your computer</li>
 <li>Open your localhost in web browser and complete the steps for admin password, plugins and required.</li>
-<li>Install plugins Manage Jenkins &gt; Manage Plugins: <em>(HTML reporter, NodeJS, Blue Ocean, Docker)</em></li>
+<li>Install plugins Manage Jenkins &gt; Manage Plugins: <em>(HTML reporter, NodeJS, Blue Ocean, SonarScanner, Jenkinslint, Slack Notification)</em></li>
 <li>Add NodeJs: Global Tools configuration &gt; NodeJs &gt; choose newman for npm.</li>
 <li>Create a new item (job). Select 'pipeline' if you want to define a Jenkinsfile with different stages or environments, but if not then select 'freestyle project'.</li>
 <li>Click on Configure:</li>
@@ -1076,8 +1210,9 @@
 <li>In <strong>Build environments</strong> check the option of 'Provide Node &amp; npm bin/ folder to PATH'</li>
 <li>In <strong>Build</strong> add an 'Add build step' and create your command to install dependencies, HTML reports and run your collection and env variables from your github repo.</li>
 <li>In Post-build Actions fill the fields. </li>
+<li>Exit 'configure' and click on <strong>build now</strong> to see if the job run fine and the HTML report with the results was generated.</li>
 <li>
-<p>Exit 'configure' and click on <strong>build now</strong> to see if the job run fine and the HTML report with the results was generated.</p>
+<p>In the case of Jenkinsfile, you define all the stages, sh commands and installation there.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>you can install and use Jenkins in your localhost or use a Docker image of Jenkins. Both are correct.</p>

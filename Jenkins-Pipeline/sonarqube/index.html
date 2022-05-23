@@ -17,7 +17,7 @@
     
     
       
-        <title>References - SQA OnBoarding Challenge</title>
+        <title>Sonarqube - SQA OnBoarding Challenge</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#backend" class="md-skip">
+        <a href="#sonarqube" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              References
+              Sonarqube
             
           </span>
         </div>
@@ -238,13 +238,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../Jenkins-Pipeline/sonarqube/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         Jenkins Pipeline
       </a>
     </li>
@@ -286,15 +288,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../References/refs/" class="md-tabs__link">
         References
       </a>
     </li>
@@ -711,12 +711,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -737,11 +739,69 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Jenkins-Pipeline/sonarqube/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Sonarqube
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Sonarqube
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sonarqube" class="md-nav__link">
+    Sonarqube
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sonarqube-configuration" class="md-nav__link">
+    Sonarqube configuration:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenkins-configuration" class="md-nav__link">
+    Jenkins configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenkinsfile" class="md-nav__link">
+    Jenkinsfile
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -753,7 +813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Jenkins-Pipeline/slack-notif/" class="md-nav__link">
+      <a href="../slack-notif/" class="md-nav__link">
         Slack Notification
       </a>
     </li>
@@ -767,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Jenkins-Pipeline/eslint/" class="md-nav__link">
+      <a href="../eslint/" class="md-nav__link">
         ESlint
       </a>
     </li>
@@ -781,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Jenkins-Pipeline/front-script/" class="md-nav__link">
+      <a href="../front-script/" class="md-nav__link">
         Frontend scripts
       </a>
     </li>
@@ -795,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Jenkins-Pipeline/back-script/" class="md-nav__link">
+      <a href="../back-script/" class="md-nav__link">
         Backend scripts
       </a>
     </li>
@@ -809,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Jenkins-Pipeline/perf-script/" class="md-nav__link">
+      <a href="../perf-script/" class="md-nav__link">
         Performance scripts
       </a>
     </li>
@@ -953,14 +1013,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
       
       
       
@@ -981,62 +1039,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          References
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../References/refs/" class="md-nav__link">
         References
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#backend" class="md-nav__link">
-    Backend
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#frontend" class="md-nav__link">
-    Frontend
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#performance" class="md-nav__link">
-    Performance
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1073,22 +1080,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#backend" class="md-nav__link">
-    Backend
+  <a href="#sonarqube" class="md-nav__link">
+    Sonarqube
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#frontend" class="md-nav__link">
-    Frontend
+  <a href="#sonarqube-configuration" class="md-nav__link">
+    Sonarqube configuration:
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#performance" class="md-nav__link">
-    Performance
+  <a href="#jenkins-configuration" class="md-nav__link">
+    Jenkins configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenkinsfile" class="md-nav__link">
+    Jenkinsfile
   </a>
   
 </li>
@@ -1105,27 +1119,73 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/wizeline/sqa-challenge-fabianportilloglez/edit/master/docs/References/refs.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/wizeline/sqa-challenge-fabianportilloglez/edit/master/docs/Jenkins-Pipeline/sonarqube.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-  <h1>References</h1>
+  <h1>Sonarqube</h1>
 
-<h3 id="backend"><strong>Backend</strong><a class="headerlink" href="#backend" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://learning.postman.com/docs/running-collections/using-newman-cli/command-line-integration-with-newman/">running postman collections - newman CLI</a></li>
-<li><a href="https://www.npmjs.com/package/postman-to-k6">npm htmlextra reports</a></li>
-</ul>
+<h3 id="sonarqube"><strong>Sonarqube</strong><a class="headerlink" href="#sonarqube" title="Permanent link">&para;</a></h3>
+<p><strong>Installation</strong>:</p>
+<ol>
+<li>I followed this <a href="https://medium.com/@lazyprogram/setup-sonarqube-on-mac-osx-c16a161d07d5">guide</a> to install and start Sonarqube in localhost with port 9000</li>
+<li>I created a SonarScanner tool in Jenkins as shown in this <a href="https://igorski.co/sonarqube-scans-using-jenkins-declarative-pipelines/">guide</a></li>
+<li>To configure <a href="https://tomgregory.com/sonarqube-quality-gates-in-jenkins-build-pipeline/">Sonarqube with jenkins</a> I followed those steps, except for the Jenkinsfile sh commands, for that I followed <a href="https://igorski.co/sonarqube-scans-using-jenkins-declarative-pipelines/">this</a> except for configuring <em>sonar-project.properties</em> file because for that I based on internet stuff and official documentation of Sonarqube.</li>
+</ol>
 <hr />
-<h3 id="frontend"><strong>Frontend</strong><a class="headerlink" href="#frontend" title="Permanent link">&para;</a></h3>
+<h3 id="sonarqube-configuration"><strong>Sonarqube configuration</strong>:<a class="headerlink" href="#sonarqube-configuration" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Create project:</strong> <em>Create project &gt; manually &gt; Write name</em> 
+<img alt="project" src="../../img/jenkins-pipe/sonar/../../../docs/img/jenkins-pipe/sonar/project.png" /></li>
+<li><strong>Enable scan code</strong> with sonar without force user credentials: <em>Administration &gt; Security &gt; Force user authentication (disable)</em>
+<img alt="auth" src="../../img/jenkins-pipe/sonar/../../../docs/img/jenkins-pipe/sonar/auth.png" /></li>
+<li><strong>Set permissions</strong> to the project: <em>Administration &gt; Project &gt; Management &gt;</em> 
+<img alt="global permissions" src="../../img/jenkins-pipe/sonar/../../../docs/img/jenkins-pipe/sonar/global-perm.png" /></li>
+<li><strong>Quality Gates:</strong> <em>Quality Gates &gt; create &gt; "name"</em></li>
+<li><strong>Add condition:</strong> You can create new conditions according of your needs and choose if you want to apply to "On new code" or "overall code".</li>
+<li><strong>Grant permissions</strong> to the previous user you created to link it to this Quality Gate. 
+   <img alt="permissions" src="../../img/jenkins-pipe/sonar/../../../docs/img/jenkins-pipe/sonar/permissions.png" /></li>
+</ol>
+<p><img alt="project" src="../../img/jenkins-pipe/sonar/../../../docs/img/jenkins-pipe/sonar/qualityGates.png" />
+5. You can choose if select <strong>as default</strong> the new Quality Gate you created or select the one with name "Sonar Way" with the default metrics already has.</p>
 <hr />
-<h3 id="performance"><strong>Performance</strong><a class="headerlink" href="#performance" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://developer.todoist.com/rest/v1/#overview">Load testing K6-Postman</a></li>
-<li><a href="https://www.npmjs.com/package/postman-to-k6">npm package postman-to-k6</a></li>
-</ul>
+<h3 id="jenkins-configuration"><strong>Jenkins configuration</strong><a class="headerlink" href="#jenkins-configuration" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Plugin:</strong> Verify if Sonarqube plugin is already installed.
+<img alt="plugin" src="../../img/jenkins-pipe/sonar/../../../docs/img/jenkins-pipe/sonar/plugin.png" /></li>
+<li><strong>SQ server:</strong> Manage &gt; Configuration &gt; SonarQube servers &gt; add
+<img alt="server" src="../../img/jenkins-pipe/sonar/../../../docs/img/jenkins-pipe/sonar/server.png" /></li>
+<li><strong>SQ scanner:</strong> Manage &gt; Global Tool Configuration &gt; SonarQube Scanner &gt; add
+<img alt="scanner" src="../../img/jenkins-pipe/sonar/../../../docs/img/jenkins-pipe/sonar/scanner.png" /></li>
+</ol>
+<hr />
+<h3 id="jenkinsfile"><strong>Jenkinsfile</strong><a class="headerlink" href="#jenkinsfile" title="Permanent link">&para;</a></h3>
+<p>This is how it looks the stages for Sonarqube:</p>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="n">stage</span><span class="p">(</span><span class="s1">&#39;Static Analysis - Sonarqube&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">environment</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">SCANNER_HOME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">tool</span><span class="w"> </span><span class="s1">&#39;SonarQubeScanner&#39;</span><span class="w"></span>
+<span class="w">            </span><span class="n">PROJECT_NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;SQA-Challenge&#39;</span><span class="w"></span>
+<span class="w">         </span><span class="p">}</span><span class="w"> </span>
+<span class="w">        </span><span class="n">steps</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">echo</span><span class="w"> </span><span class="s1">&#39;running Sonarqube..&#39;</span><span class="w"></span>
+<span class="w">                </span><span class="n">echo</span><span class="w"> </span><span class="s2">&quot;${SCANNER_HOME}&quot;</span><span class="w"></span>
+<span class="w">                </span><span class="n">withSonarQubeEnv</span><span class="p">(</span><span class="s1">&#39;SonarQube&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;&#39;&#39;</span><span class="w"></span>
+<span class="s1">                    ${SCANNER_HOME}/bin/sonar-scanner </span><span class="se">\</span>
+<span class="s1">                    -Dsonar.projectKey=&quot;${PROJECT_NAME}&quot; </span><span class="w"></span>
+<span class="s1">                    &#39;&#39;&#39;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">stage</span><span class="p">(</span><span class="s1">&#39;Quality Gate - Sonarqube&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">steps</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">echo</span><span class="w"> </span><span class="s1">&#39;waiting for QualityGate Sonarqube..&#39;</span><span class="w"></span>
+<span class="w">                </span><span class="n">waitForQualityGate</span><span class="w"> </span><span class="n">abortPipeline</span><span class="p">:</span><span class="w"> </span><span class="bp">true</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
 
               
             </article>
@@ -1139,7 +1199,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../Contribute-Doc/mkdocs-refs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: References" rel="prev">
+        <a href="../../Performance/perf-improv/" class="md-footer__link md-footer__link--prev" aria-label="Previous: TODO: Improvements" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1148,11 +1208,26 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              References
+              TODO: Improvements
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../slack-notif/" class="md-footer__link md-footer__link--next" aria-label="Next: Slack Notification" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Slack Notification
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
