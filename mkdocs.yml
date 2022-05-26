@@ -35,8 +35,13 @@ nav:
       - 'Backend scripts': 'Jenkins-Pipeline/back-script.md'
       - 'Performance scripts': 'Jenkins-Pipeline/perf-script.md'
 
-    - SQA Diagram:
-      - 'Diagram': 'SQA-Diagram/sqa-diagram.md'
+    - Business Presentation:
+      - 'Test Plan & Strategy': 'Business-Present/test-plan-strat.md'
+      - 'QA process': 'Business-Present/qa-process.md'
+      - 'Testing types': 'Business-Present/test-types.md'
+      - 'Tools description': 'Business-Present/tools-desc.md'
+      - 'Diagram': 'Business-Present/diagram.md'
+      - 'Demo - video': 'Business-Present/demo.md'
 
     - Contribute Doc: 
       - 'Installation': 'Contribute-Doc/install-mkdocs.md'

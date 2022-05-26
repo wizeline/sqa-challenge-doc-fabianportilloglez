@@ -1,0 +1,7 @@
+
+
+Smoke 
+
+Sanity 
+
+Regression
