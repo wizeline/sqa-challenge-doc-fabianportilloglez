@@ -1,7 +1,6 @@
 
+**Regression tests:**
 
-Smoke 
-
-Sanity 
-
-Regression
+* Smoke 
+* Sanity 
+* Regression
