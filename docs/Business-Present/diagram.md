@@ -1,0 +1,1 @@
+![secret](../img/bus-pres/sqa-diagram-name.png)
