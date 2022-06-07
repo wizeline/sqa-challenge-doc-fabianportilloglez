@@ -6,6 +6,9 @@
 ___ 
 
 ### **Frontend**
+
+* [Cypress dotenv](https://dev.to/m4rri4nne/cypress-dotenv-como-utilizar-arquivos-env-em-seus-testes-automatizados-49bl)
+
 ___
 ### **Performance**
 
