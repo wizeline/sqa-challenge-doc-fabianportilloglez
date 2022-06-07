@@ -20,12 +20,12 @@ nav:
       - '3.- Results': 'Front-End/front-results.md'
       - 'TODO: Improvements': 'Front-End/front-improv.md'
 
-    - Performance:
-      - 'Requirements': 'Performance/perf-reqs.md'
-      - '1.- Teck Stack': 'Performance/perf-tech-stack.md'
-      - '2.- Process': 'Performance/perf-process.md' 
-      - '3.- Results': 'Performance/perf-results.md' 
-      - 'TODO: Improvements': 'Performance/perf-improv.md'
+#    - Performance:
+#      - 'Requirements': 'Performance/perf-reqs.md'
+#      - '1.- Teck Stack': 'Performance/perf-tech-stack.md'
+#      - '2.- Process': 'Performance/perf-process.md' 
+#      - '3.- Results': 'Performance/perf-results.md' 
+#      - 'TODO: Improvements': 'Performance/perf-improv.md'
 
     - Jenkins Pipeline:
       - 'Sonarqube': 'Jenkins-Pipeline/sonarqube.md'
@@ -33,7 +33,7 @@ nav:
       - 'ESlint': 'Jenkins-Pipeline/eslint.md'
       - 'Frontend scripts': 'Jenkins-Pipeline/front-script.md'
       - 'Backend scripts': 'Jenkins-Pipeline/back-script.md'
-      - 'Performance scripts': 'Jenkins-Pipeline/perf-script.md'
+#  - 'Performance scripts': 'Jenkins-Pipeline/perf-script.md'
 
     - Business Presentation:
       - 'Test Plan & Strategy': 'Business-Present/test-plan-strat.md'

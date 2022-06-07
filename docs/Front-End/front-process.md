@@ -1,24 +1,23 @@
 ### **Front End con Cypress:**
-**Variables de ambiente** — Guardar en(.env y cypress.json) los valores usados a lo largo del SQA. También se puede tener un folder de config y centro varios files dependiendo el ambiente o un archivo cypress.env.json donde se definan las cosas
+## **Introduction**
 
-**Utilizar POM y BDD** - hacer que la estrategia sea escalable y las funciones definidas o los elenentos sean reutilizables
+In this section is described the steps followed to complete the frontend section of the SQA Onboarding challenge.
+___
+## **Prerequisites** *(optional)*
 
-**Definir un ESLint** — en el proyecto con reglas y estructura
-Crear scripts --- En el package.json definir algunos scripts para poder correr los tests también en --headless CLI
-Eliminar los tests y data después de correrse - Definir los before() and after() en cada archivo de .js para que los tests se mantengan independientes y sin data que estorbe
+* Study about best practices in automation testing and read some documentation of Cypress about selectors, type of selectors and project structure.
+* Read about Behavior Driven Development and Page Object Model (POM).
+___
+## **Steps**
 
-**Selección de elementos** --- Encontrar la estrategia de mejor selección de elementos y comprobar si es mejor guardarlos por archivo de Page o tener algunas definciiones en archivos independientes y llamarlos desde ahí
+### **Cypress**
 
-**Comandos comunes y reutilizables** --- Es conveniente definir algunos comandos en commands.js o crear un file de commonSteps donde se definan aquellos que se pueden reutilizar?
-
-**Ocultar contraseña** - Hacer que los datos sensibles no sean visibles al correr el Test runner con log: false
-Screenshots: Hacer eficiente la forma en que se almacenan y también borrarlos una vez que el test termina
-
-**Assertions** --- Chai assertions de expect y should en los tests
-
-**Reportes** --- Lograr que se creen reportes cuando finalice el test y que se guarden en un folder
-
-**Slack notification**
-Jenkins, asignar que los tests corran por consola usando jenkins pipeline y definiendo todo en un Jenkinsfile
-
-**Sonarqube** --- Configurar sonarqube e integrarlo con el repo de github y además en un stage del Jenkinsfile para checar las validaciones
+1. Install Cypress, its dependencies and initial configuration in some files like *cypress.json* or *package.json*
+2. Create .gitignore file and add the folders I don't want to deploy.
+3. Install ESLint and configure file for rules that apply for Javascript and Cypress coding standards.
+4. Define the type of structure I want to use, in this case; BDD, POM and Step Definition files and create their corresponding folders and paths.
+5. Define file and path where most of the locators will be stored
+6. Define the scenarios and steps for *.feature* files (login) using BDD/Gherking sentences for positive and negative scenarios
+7. Define the logic in pages file and call steps in the steps file. (same applies to the other pages of the project)
+8. Continue coding and testing in CLI mode and Test runner until considerable changes works fine and then commit and push them.
+9. Repeat last step.
